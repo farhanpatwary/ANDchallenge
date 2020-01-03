@@ -18,7 +18,7 @@ to this repository.
 ### My thoughts on this Challenge
 I enjoyed doing this challenge, once I figured out what to do it was fairly straight forward.   
 
-#### Places where I had hiccups
+### Places where I've had hiccups
 I have only come across one minor hiccup.
 Initially I was just logging to the console whenever I reached a complete permutation.
 i.e.
