@@ -43,7 +43,8 @@ getPermutations(used,unused)
 return permutations; 
 ```
 ### Assumptions I have made
-1) I am assuming that the input may not contain negative numbers.       
+1) I am assuming that the input may not contain negative numbers.    
+
 I did this because I wasn't sure if an input such as 'ABC-3D4A7' should become `[-3,4,7]` or `[3,4,7]` after extracting the integers. My method assumes that it would be the latter option i.e. `[3,4,7]`.   
 In the case that the input needs to consider negative numbers, i.e. `'ABC-3D4A7'` gives `[-3,4,7]` when extracting the numbers, I would need to make a simple change.      
 i.e. In this part of the code: 
