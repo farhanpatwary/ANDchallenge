@@ -10,3 +10,7 @@ This can be split into two parts
 1) Extract the numbers out of the input   
   i.e. if the input  is 'ABC 3A 2B CCC' then we want [3,2]
 2) Recursively generate all the permutations using the result of step 1
+
+## More
+This readme will also be included in the submission so I am including the [link](https://github.com/farhanpatwary/ANDchallenge)
+to the repository where I have pushed the code.
