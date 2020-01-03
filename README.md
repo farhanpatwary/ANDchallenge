@@ -42,4 +42,24 @@ permutations = [];
 getPermutations(used,unused)
 return permutations; 
 ```
-
+### Assumptions I have made
+1) I am assuming that the input may not contain negative numbers.   
+I did this because I wasn't sure if an input such as 'ABC-3D4A7' should become `[-3,4,7]` or `[3,4,7]` after extracting the integers. My method assumes that it would be the latter option i.e. `[3,4,7]`.   
+In the case that the input needs to consider negative numbers, i.e. `'ABC-3D4A7'` gives `[-3,4,7]` when extracting the numbers, I would need to make a simple change.   
+i.e. In this part of the code: 
+```js
+for(var i=0; i<input.length; i++){
+	if(is_num(input[i])){
+		available.push(parseInt(input[i]));
+	}
+}
+```
+I could add a  `&& input[i-1] !== '-'` to the if statement. This would make sure only positive integers get added.
+i.e. something like this:
+```js
+for(var i=0; i<input.length; i++){
+	if(is_num(input[i]) && input[i-1] !== '-'){
+		available.push(parseInt(input[i]));
+	}
+}
+```
