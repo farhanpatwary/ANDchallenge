@@ -64,3 +64,7 @@ for(var i=0; i<input.length; i++){
 	}
 }
 ```
+
+### Time Complexity
+The algorithm runs in O(n) time
+
