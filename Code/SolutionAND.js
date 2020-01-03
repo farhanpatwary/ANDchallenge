@@ -17,12 +17,15 @@ function solution (input) {
 	let available = [];
 	// Input has to be of type String
 	if(typeof input !== "string"){
-		return "Input must be of type string"
+		throw "Input must be of type string"
 	}
 	for(var i=0; i<input.length; i++){
 		if(is_num(input[i])){
 			available.push(parseInt(input[i]));
 		}
+	}
+	if(available.length === 0){
+		throw "Input must contain numbers"
 	}
 	// Available now contains all the numbers from the input
 	// i.e. if input is 'A 3B2 C6D', then Available = [3,2,6]
@@ -78,4 +81,8 @@ function getPermutations(used, available){
 console.log('')
 console.log(solution('326')); // expected ouput 632,623,362,326,263,236
 console.log('')
-console.log(solution('A 3B7 C6D')); // expected ouput 632,623,362,326,263,236
+console.log(solution('A 3B2 C6D')); // expected ouput 632,623,362,326,263,236
+console.log('')
+console.log(solution(4)); // Error: Input must be of type String
+console.log('')
+console.log(solution('')); // Error: Input must contain numbers
