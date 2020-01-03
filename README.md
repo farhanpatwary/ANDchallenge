@@ -22,24 +22,24 @@ I enjoyed doing this challenge, once I figured out what to do it was fairly stra
 I have only come across one minor hiccup.
 Initially I was just logging to the console whenever I reached a complete permutation.
 i.e.
-```
+```js
 if(available.length === 0){
-		console.log(used)
-	}
+	console.log(used)
+}
 ```
 However I later realised I may need to give the output as an array of arrays, where each sub-array is a permutation.
 I initially didn't know how that would be done as I was printing out the output from within the recursive function, but after a few minutes I figured I would store all the permutations in a global variable and clear it before running the function.
 i.e.
-```
+```javascript
 // in getPermutations()
 if(available.length === 0){
-		permutations.push(used)
-	}
+	permutations.push(used)
+}
 ```
 ```
 // in solution()
 permutations = [];
-	getPermutations(used,unused)
-	return permutations; 
+getPermutations(used,unused)
+return permutations; 
 ```
 
